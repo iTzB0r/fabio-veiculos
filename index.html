@@ -230,7 +230,7 @@ section{padding:70px 0}
 <span style="color:var(--mut);font-size:.85rem">Parcela estimada</span>
 <div class="big" id="sRes"></div>
 <small>Simulação ilustrativa com taxa de referência de 1,79% a.m. Condições reais sujeitas à análise de crédito.</small>
-<a class="btn btn-wa" id="sWa" style="justify-content:center"><svg class="i" viewBox="0 0 24 24"><use href="#wai"/></svg> Aprovar no WhatsApp</a>
+<a class="btn btn-wa" id="sWa" style="justify-content:center"><svg class="i" viewBox="0 0 24 24"><use href="#wai"/></svg> Consultar condições</a>
 </div>
 </div>
 
@@ -348,7 +348,7 @@ $('#sCar').innerHTML=cars.map(c=>`<option value="${c.id}">${c.b} ${c.n} ${c.y} �
 function sim(){const c=cars.find(x=>x.id==$('#sCar').value),pct=+$('#sEnt').value,n=+$('#sMes').value,ent=Math.round(c.p*pct/100/1000)*1000,fin=c.p-ent,i=.0179;
  const pmt=fin<=0?0:fin*i/(1-Math.pow(1+i,-n));
  $('#eV').textContent=`${brl(ent)} (${pct}%)`;$('#sRes').textContent=pmt?`${n}x ${brl(pmt)}`:'Sem parcelas';
- $('#sWa').href=wa(`Olá! Simulei no site: ${c.b} ${c.n} ${c.y} (${brl(c.p)}), entrada ${brl(ent)}, ${n}x de ~${brl(pmt)}. Podemos avançar com a aprovação?`);$('#sWa').target="_blank"}
+ $('#sWa').href=wa(`Olá! Simulei no site: ${c.b} ${c.n} ${c.y} (${brl(c.p)}), entrada ${brl(ent)}, ${n}x de ~${brl(pmt)}. Pode me passar as condições de financiamento?`);$('#sWa').target="_blank"}
 ['sCar','sEnt','sMes'].forEach(i=>$('#'+i).oninput=sim);
 $('#tWa').onclick=e=>{const m=$('#tModel').value.trim();if(!m){e.preventDefault();$('#tModel').focus();return}
  e.currentTarget.href=wa(`Olá! Meu nome é ${$('#tName').value||'(não informado)'}. Quero avaliar meu usado: ${m}, ano ${$('#tYear').value||'?'}, ${$('#tKm').value||'?'} km. Pode me passar uma avaliação?`);e.currentTarget.target="_blank"};
