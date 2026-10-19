@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fábio Veículos — Mais de 20 anos de tradição em bons negócios</title>
+<meta name="description" content="Seminovos selecionados em Castanhal-PA. Financiamento, avaliação do seu usado e seguro, tudo pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;500;600&family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--bg2:#111113;--card:#16161a;--line:#2a2a30;--tx:#f4f1ea;--mut:#9b978d;--gold:#d4b06a;--gold2:#f1dba5;--wa:#25d366}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:400 15px/1.7 Montserrat,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:600;line-height:1.05}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;color:inherit;background:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+section{padding:96px 0}
+.eyebrow{color:var(--gold);letter-spacing:.28em;text-transform:uppercase;font-size:.72rem;font-weight:600;margin-bottom:14px;display:block}
+h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:18px}
+.lead{color:var(--mut);max-width:560px}
+.gold{background:linear-gradient(110deg,var(--gold),var(--gold2) 45%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow,.btn,.menu,.chip,.stats span,.tag,.live,.panel label{font-family:'Josefin Sans',sans-serif}
+.btn{letter-spacing:.06em;text-transform:uppercase;font-size:.85rem!important}
+.menu{letter-spacing:.1em;text-transform:uppercase;font-size:.82rem!important}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5rem)!important;line-height:1.1}
+h2{line-height:1.15}
+.soc a.ico{width:54px;height:54px;padding:0;justify-content:center;border-radius:50%}
+.soc a.ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7}
+.soc a.ico.fb svg{fill:currentColor;stroke:none}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:99px;font-weight:600;font-size:.95rem;transition:.3s}
+.btn-gold{background:linear-gradient(110deg,var(--gold),var(--gold2));color:#1a1405}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px var(--gold)}
+.btn-wa{background:var(--wa);color:#04210f}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px var(--wa)}
+.btn-line{border:1px solid var(--line)}
+.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+svg.i{width:1.2em;height:1.2em;fill:currentColor}
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:50;transition:.3s}
+nav.sc{background:rgba(10,10,11,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;letter-spacing:.02em}
+.logo img{display:block;height:38px;width:auto;filter:brightness(1.35) contrast(1.05)}
+.menu{display:flex;gap:30px;align-items:center;font-size:.9rem}
+.menu a:not(.btn){color:var(--mut);transition:.2s}.menu a:not(.btn):hover{color:var(--gold)}
+.menu .btn{padding:10px 20px}
+.burger{display:none;width:40px;height:40px}
+.burger span{display:block;height:2px;background:var(--tx);margin:6px 8px}
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:120px 0 80px;
+background:radial-gradient(900px 500px at 75% 30%,rgba(212,176,106,.16),transparent 60%),radial-gradient(600px 400px at 10% 90%,rgba(212,176,106,.07),transparent 60%)}
+.hero h1{font-size:clamp(3rem,8vw,6.2rem);margin-bottom:24px}
+.hero p{color:var(--mut);max-width:520px;font-size:1.1rem;margin-bottom:34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.car-stage{position:relative;aspect-ratio:4/5;width:100%;max-width:460px;margin-left:auto;border-radius:200px 200px 28px 28px;overflow:hidden;border:1px solid var(--gold);box-shadow:0 40px 80px -20px rgba(212,176,106,.25)}
+.car-stage img{width:100%;height:100%;object-fit:cover;object-position:50% 62%;animation:zoom 12s ease-in-out infinite alternate}
+.car-stage::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 60%,rgba(10,10,11,.7));pointer-events:none}
+@keyframes zoom{to{transform:scale(1.08)}}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes float{50%{transform:translateY(-10px)}}
+.stats{display:flex;gap:40px;margin-top:54px;flex-wrap:wrap}
+.stats div b{display:block;font:600 2.6rem/1 'Playfair Display',serif;color:var(--gold)}
+.stats div span{font-size:.8rem;color:var(--mut);letter-spacing:.08em;text-transform:uppercase}
+.live{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);padding:6px 14px;border-radius:99px;font-size:.78rem;color:var(--mut);margin-bottom:26px}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 0 var(--wa);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+/* marquee */
+.marq{border-block:1px solid var(--line);padding:20px 0;overflow:hidden;background:var(--bg2)}
+.marq div{display:flex;gap:60px;width:max-content;animation:mq 30s linear infinite;font:600 1.5rem 'Playfair Display',serif;color:var(--mut)}
+.marq span::after{content:"✦";color:var(--gold);margin-left:60px}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.seal{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.seal div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;transition:.3s}
+.seal div:hover{border-color:var(--gold);transform:translateY(-4px)}
+.seal em{font-style:normal;color:var(--gold);font:600 2rem 'Playfair Display',serif}
+.seal h3{font-size:1.3rem;margin:6px 0}.seal p{color:var(--mut);font-size:.88rem}
+/* stock */
+.bar{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 10px;align-items:center}
+.chip{padding:9px 18px;border-radius:99px;border:1px solid var(--line);font-size:.85rem;color:var(--mut);transition:.2s}
+.chip.on,.chip:hover{border-color:var(--gold);color:var(--gold)}
+.chip.on{background:rgba(212,176,106,.1)}
+select,input[type=text],input[type=tel],input[type=number]{background:var(--card);border:1px solid var(--line);color:var(--tx);padding:11px 16px;border-radius:12px;font:inherit;font-size:.9rem;width:100%}
+.bar select{width:auto}
+select:focus,input:focus{outline:0;border-color:var(--gold)}
+.range{display:flex;align-items:center;gap:12px;font-size:.85rem;color:var(--mut)}
+input[type=range]{accent-color:var(--gold);width:160px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px;margin-top:26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:border-color .3s,transform .15s;position:relative;transform-style:preserve-3d}
+.card:hover{border-color:var(--gold)}
+.pic{aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--bg)}
+.pic img{width:100%;height:100%;object-fit:cover;object-position:50% 58%;transition:.6s}.card:hover .pic img{transform:scale(1.08)}
+.pic::after{content:"";position:absolute;inset:auto 0 0;height:40%;background:linear-gradient(transparent,var(--card));pointer-events:none}
+.tag{position:absolute;top:14px;left:14px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:3px 10px;border-radius:99px}
+.fav{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:var(--mut);transition:.2s}
+.fav:hover{color:var(--gold)}.fav.on{color:#ff5a6e}
+.fav.on svg{fill:currentColor}.fav svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2}
+.info{padding:18px 20px 22px}
+.info h3{font-size:1.45rem;margin-bottom:2px}
+.info small{color:var(--mut);display:block;font-size:.8rem;min-height:2.6em}
+.specs{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
+.specs span{font-size:.72rem;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:3px 9px;color:var(--mut)}
+.price{display:flex;justify-content:space-between;align-items:end;margin-bottom:14px}
+.price b{font:600 1.9rem 'Playfair Display',serif;color:var(--gold2)}
+.price span{font-size:.75rem;color:var(--mut)}
+.card .btn{width:100%;justify-content:center;padding:12px}
+.empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:50px}
+/* favorites bar */
+.favbar{position:fixed;left:50%;bottom:24px;transform:translate(-50%,160%);z-index:60;background:var(--card);border:1px solid var(--gold);border-radius:99px;padding:10px 12px 10px 24px;display:flex;gap:16px;align-items:center;transition:.4s;box-shadow:0 20px 50px -10px #000;font-size:.9rem;max-width:calc(100vw - 100px)}
+.favbar.show{transform:translate(-50%,0)}
+.favbar .btn{padding:10px 18px;font-size:.85rem}
+/* tools */
+.tools{background:var(--bg2);border-block:1px solid var(--line)}
+.tabs{display:flex;gap:10px;margin:30px 0 24px;flex-wrap:wrap}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:34px;background:var(--card);border:1px solid var(--line);border-radius:26px;padding:34px}
+.panel.on{display:grid}
+.panel label{display:block;font-size:.78rem;color:var(--mut);margin:14px 0 6px;letter-spacing:.06em;text-transform:uppercase}
+.panel label:first-child{margin-top:0}
+.result{background:var(--bg);border:1px dashed var(--gold);border-radius:20px;padding:30px;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.result .big{font:600 3.4rem/1 'Playfair Display',serif;color:var(--gold2);margin:8px 0}
+.result small{color:var(--mut);font-size:.75rem;display:block;margin:10px 0 20px}
+.result p{color:var(--mut);font-size:.92rem;margin-bottom:20px}
+/* insurance */
+.ins{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.ins ul{list-style:none;margin:24px 0}
+.ins li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:12px}
+.ins li::before{content:"✓";color:var(--gold)}
+.shield{aspect-ratio:1;border:1px solid var(--line);border-radius:30px;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,rgba(212,176,106,.18),transparent 65%)}
+.shield svg{width:45%;fill:none;stroke:var(--gold);stroke-width:1.5}
+/* contact */
+.contact{text-align:center;background:radial-gradient(700px 350px at 50% 100%,rgba(37,211,102,.12),transparent 70%)}
+.contact .lead{margin:0 auto 34px}
+.soc{display:flex;gap:14px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-size:.82rem;text-align:center}
+/* wa float */
+.wa{position:fixed;right:22px;bottom:22px;z-index:70;display:flex;align-items:center;gap:12px}
+.wa .tip{background:var(--card);border:1px solid var(--line);padding:8px 16px;border-radius:99px;font-size:.82rem;opacity:0;transform:translateX(10px);transition:.3s;pointer-events:none;white-space:nowrap}
+.wa:hover .tip{opacity:1;transform:none}
+.wa a{width:62px;height:62px;border-radius:50%;background:var(--wa);display:grid;place-items:center;color:#04210f;box-shadow:0 10px 30px -5px rgba(37,211,102,.6);animation:pulse 2.4s infinite;transition:.3s}
+.wa a:hover{transform:scale(1.1)}.wa svg{width:32px;height:32px;fill:currentColor}
+.rv{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
+@media(max-width:860px){
+section{padding:70px 0}
+.menu{position:fixed;inset:72px 0 auto;background:var(--bg);flex-direction:column;padding:24px;gap:20px;border-bottom:1px solid var(--line);display:none}
+.menu.open{display:flex}.burger{display:block}
+.hero-grid,.about,.panel.on,.ins{grid-template-columns:1fr}
+.car-stage{order:-1;max-width:320px;margin:0 auto}
+.hero{padding-top:100px}
+.favbar{bottom:96px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+<a href="#top" class="logo" aria-label="Fábio Veículos"><img src="img/logo.png" alt="Fábio Veículos" width="150" height="36"></a>
+<div class="menu" id="menu">
+<a href="#sobre">Quem somos</a><a href="#estoque">Estoque</a><a href="#simular">Simuladores</a><a href="#seguro">Seguro</a><a href="#contato">Contato</a>
+<a class="btn btn-wa" data-wa="Olá! Vim pelo site da Fábio Veículos e gostaria de atendimento.">WhatsApp</a>
+</div>
+<button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap hero-grid">
+<div>
+<div class="live"><i></i> Atendimento online 24h · 7 dias</div>
+<h1>Mais de 20 anos de <span class="gold">tradição</span> em bons negócios.</h1>
+<p>Seminovos criteriosamente selecionados em Castanhal. Credibilidade, qualidade e segurança em cada chave entregue.</p>
+<div class="cta">
+<a href="#estoque" class="btn btn-gold">Ver estoque</a>
+<a class="btn btn-wa" data-wa="Olá! Vim pelo site e quero ajuda para escolher um veículo."><svg class="i" viewBox="0 0 24 24"><use href="#wai"/></svg> Falar no WhatsApp</a>
+</div>
+<div class="stats">
+<div><b data-n="20">0</b><span>anos de mercado</span></div>
+<div><b data-n="10">0</b><span>veículos em estoque</span></div>
+<div><b data-n="24">0</b><span>horas de atendimento</span></div>
+</div>
+</div>
+<div class="car-stage" id="stage"></div>
+</div></header>
+
+<div class="marq"><div id="marq"></div></div>
+
+<section id="sobre"><div class="wrap about">
+<div class="rv">
+<span class="eyebrow">Quem somos</span>
+<h2>Tradição que você <span class="gold">pode sentir</span>.</h2>
+<p class="lead">Há mais de duas décadas a Fábio Veículos constrói relações de confiança em Castanhal e região. Cada carro passa por uma seleção rigorosa — porque um bom negócio é aquele que você repete e indica.</p>
+<br><a class="btn btn-line" data-wa="Olá! Gostaria de conhecer melhor a Fábio Veículos.">Conversar com a equipe</a>
+</div>
+<div class="seal rv">
+<div><em>01</em><h3>Seleção criteriosa</h3><p>Só entra no estoque o que a gente compraria para a família.</p></div>
+<div><em>02</em><h3>Transparência</h3><p>Preço, quilometragem e histórico às claras, sem letra miúda.</p></div>
+<div><em>03</em><h3>Melhores condições</h3><p>Financiamento e entrada facilitados para cada perfil.</p></div>
+<div><em>04</em><h3>Pós-venda</h3><p>Seguro com a Tauary Corretora e suporte direto no WhatsApp.</p></div>
+</div>
+</div></section>
+
+<section id="estoque" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
+<span class="eyebrow">Nosso estoque</span>
+<h2>Escolha o <span class="gold">seu próximo</span> carro.</h2>
+<div class="bar" id="cats"></div>
+<div class="bar">
+<select id="fBrand"></select>
+<select id="fTrans"><option value="">Câmbio: todos</option><option>Automático</option><option>Manual</option></select>
+<select id="fSort"><option value="p0">Menor preço</option><option value="p1">Maior preço</option><option value="y1">Mais novos</option><option value="k0">Menor km</option></select>
+<div class="range">Até <b id="pv" style="color:var(--gold)"></b><input type="range" id="fPrice" min="50000" max="170000" step="5000" value="170000"></div>
+</div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section class="tools" id="simular"><div class="wrap">
+<span class="eyebrow">Ferramentas exclusivas</span>
+<h2>Planeje antes de <span class="gold">fechar negócio</span>.</h2>
+<p class="lead">Simule o financiamento ou descubra quanto vale o seu usado — e leve tudo pronto para a conversa no WhatsApp.</p>
+<div class="tabs"><button class="chip on" data-t="0">Simular financiamento</button><button class="chip" data-t="1">Avaliar meu usado</button></div>
+
+<div class="panel on rv in">
+<div>
+<label>Veículo</label><select id="sCar"></select>
+<label>Entrada: <b id="eV" style="color:var(--gold)"></b></label><input type="range" id="sEnt" min="0" max="100" value="30" style="width:100%">
+<label>Parcelas</label><select id="sMes"><option>12</option><option>24</option><option selected>36</option><option>48</option><option>60</option></select>
+</div>
+<div class="result">
+<span style="color:var(--mut);font-size:.85rem">Parcela estimada</span>
+<div class="big" id="sRes"></div>
+<small>Simulação ilustrativa com taxa de referência de 1,79% a.m. Condições reais sujeitas à análise de crédito.</small>
+<a class="btn btn-wa" id="sWa" style="justify-content:center"><svg class="i" viewBox="0 0 24 24"><use href="#wai"/></svg> Aprovar no WhatsApp</a>
+</div>
+</div>
+
+<div class="panel">
+<div>
+<label>Seu veículo (marca / modelo)</label><input type="text" id="tModel" placeholder="Ex.: Onix 1.0 LT">
+<label>Ano</label><input type="number" id="tYear" placeholder="2019" min="1990" max="2026">
+<label>Quilometragem</label><input type="number" id="tKm" placeholder="60000">
+<label>Seu nome</label><input type="text" id="tName" placeholder="Como podemos te chamar?">
+</div>
+<div class="result">
+<p>Envie os dados do seu usado e receba uma <b style="color:var(--gold)">avaliação justa</b> direto no WhatsApp — o valor pode virar entrada no seu próximo carro.</p>
+<a class="btn btn-wa" id="tWa" style="justify-content:center"><svg class="i" viewBox="0 0 24 24"><use href="#wai"/></svg> Pedir avaliação</a>
+</div>
+</div>
+</div></section>
+
+<section id="seguro"><div class="wrap ins">
+<div class="rv">
+<span class="eyebrow">Tauary Corretora de Seguros</span>
+<h2>Proteção para o carro <span class="gold">que você ama</span>.</h2>
+<p class="lead">Saia da loja já assegurado. Nossa parceira cota as melhores soluções para proteger seu veículo.</p>
+<ul><li>Cotação junto às principais seguradoras</li><li>Cobertura para roubo, furto, colisão e terceiros</li><li>Atendimento humano, do contrato ao sinistro</li></ul>
+<a class="btn btn-gold" href="tel:+559181682525">Ligar (91) 98168-2525</a>
+</div>
+<div class="shield rv"><svg viewBox="0 0 64 64"><path d="M32 6l20 8v16c0 14-9 24-20 28C21 54 12 44 12 30V14z"/><path d="M23 32l7 7 12-14"/></svg></div>
+</div></section>
+
+<section class="contact" id="contato" style="border-top:1px solid var(--line)"><div class="wrap">
+<span class="eyebrow">Contato</span>
+<h2>Vamos fechar um <span class="gold">bom negócio</span>?</h2>
+<p class="lead">Responda em minutos, a qualquer hora. Sem fila, sem burocracia.</p>
+<a class="btn btn-wa" style="font-size:1.1rem;padding:18px 38px" data-wa="Olá! Vim pelo site e quero falar com a Fábio Veículos."><svg class="i" viewBox="0 0 24 24"><use href="#wai"/></svg> (91) 99121-4920</a>
+<div class="soc">
+<a class="btn btn-line ico" href="https://instagram.com/fabioveiculosltda" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+<a class="btn btn-line ico fb" href="https://facebook.com/fabioveiculoscastanhal" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.8v3h2.7V21z"/></svg></a>
+</div>
+</div></section>
+
+<footer><div class="wrap">© <span id="yr"></span> Fábio Veículos · Castanhal, PA · Valores e disponibilidade sujeitos a alteração.</div></footer>
+
+<div class="favbar" id="favbar"><span><b id="fc">0</b> favorito(s)</span><a class="btn btn-wa" id="favWa">Enviar no WhatsApp</a></div>
+
+<div class="wa"><span class="tip">Online agora · responde rápido</span><a data-wa="Olá! Vim pelo site da Fábio Veículos." aria-label="WhatsApp"><svg viewBox="0 0 24 24"><use href="#wai"/></svg></a></div>
+
+<svg width="0" height="0" style="position:absolute"><defs><symbol id="wai" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 004.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.1c-.25.69-1.45 1.32-2 1.37-.51.05-1 .24-3.38-.7-2.86-1.13-4.67-4.06-4.81-4.25-.14-.19-1.15-1.53-1.15-2.92s.73-2.07.99-2.35c.26-.28.56-.35.75-.35h.54c.17 0 .41-.07.64.49.25.58.83 2.01.9 2.16.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.17-.3.37-.42.5-.14.14-.29.29-.12.57.16.28.73 1.2 1.56 1.94 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07.17-.19.7-.82.89-1.1.19-.28.38-.23.64-.14.26.09 1.66.78 1.94.92.28.14.47.21.54.33.07.12.07.68-.18 1.37z"/></symbol></defs></svg>
+
+<script>
+const NUM="5591991214920";
+const wa=t=>`https://wa.me/${NUM}?text=${encodeURIComponent(t)}`;
+const brl=n=>n.toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
+const $=s=>document.querySelector(s);
+
+const cars=[
+{id:1,b:"Chevrolet",n:"Tracker 1.4 Turbo LT",d:"Automática Flex",y:2018,p:80000,k:103000,c:"SUV",t:"Automático",col:"Preto",hex:"#1b1b1f"},
+{id:2,b:"Fiat",n:"Strada 1.4 Endurance",d:"Cabine Simples Flex",y:2021,p:70000,k:105000,c:"Pick-up",t:"Manual",col:"Prata",hex:"#b8bcc4"},
+{id:3,b:"Fiat",n:"Strada 1.4 Endurance",d:"Cabine Simples Flex",y:2023,p:80000,k:75000,c:"Pick-up",t:"Manual",col:"Branco",hex:"#f1f1f1"},
+{id:4,b:"Fiat",n:"Strada 1.3 Freedom",d:"Cabine Dupla Flex",y:2025,p:115000,k:57000,c:"Pick-up",t:"Manual",col:"Branco",hex:"#f1f1f1"},
+{id:5,b:"Fiat",n:"Strada 1.3 Volcano",d:"Cabine Dupla Automática Flex",y:2025,p:125000,k:31000,c:"Pick-up",t:"Automático",col:"Prata",hex:"#b8bcc4"},
+{id:6,b:"Hyundai",n:"HB20 S 1.6 Premium",d:"Automático Flex",y:2015,p:56000,k:130000,c:"Sedan",t:"Automático",col:"Branco",hex:"#f1f1f1"},
+{id:7,b:"Toyota",n:"Hilux SW4 2.7 SRV",d:"7 lugares · Blindada",y:2020,p:170000,k:95000,c:"SUV",t:"Automático",col:"Preto",hex:"#1b1b1f",star:1},
+{id:8,b:"Toyota",n:"Corolla 2.0 XEI",d:"Flex",y:2016,p:85000,k:125000,c:"Sedan",t:"Automático",col:"Cinza",hex:"#6d7078"},
+{id:9,b:"Volkswagen",n:"Gol 1.0",d:"Flex",y:2022,p:58000,k:69000,c:"Hatch",t:"Manual",col:"Prata",hex:"#b8bcc4"},
+{id:10,b:"Volkswagen",n:"T-Cross T200 Turbo",d:"Comfortline Flex",y:2020,p:85000,k:232000,c:"SUV",t:"Automático",col:"Preto",hex:"#1b1b1f"}
+];
+
+/* SVG silhouettes tinted by real car color */
+function carSVG(type,hex){
+ const w=`<g fill="#0c0c0e" stroke="#555" stroke-width="2"><circle cx="85" cy="112" r="17"/><circle cx="255" cy="112" r="17"/></g><g fill="#888"><circle cx="85" cy="112" r="6"/><circle cx="255" cy="112" r="6"/></g>`;
+ const body={
+ "SUV":`<path d="M20 108V84q0-8 8-10l36-8 26-30q6-6 14-6h100q10 0 16 7l26 30 34 8q8 2 8 10v23z"/><path d="M95 40h64v26H80zM170 40h40l22 26h-62z" fill="#9fb3c4" opacity=".55"/>`,
+ "Pick-up":`<path d="M16 108V86q0-8 8-9l46-4 30-28q5-5 12-5h58q8 0 13 5l12 27h98q8 0 8 8v28z"/><path d="M110 46h52v26H92zM172 46h26l10 26h-36z" fill="#9fb3c4" opacity=".55"/>`,
+ "Sedan":`<path d="M16 108V90q0-8 8-10l48-14 30-26q5-4 12-4h80q8 0 13 4l36 26 40 10q8 2 8 10v18z"/><path d="M108 44h56v22H88zM172 44h20l30 22h-50z" fill="#9fb3c4" opacity=".55"/>`,
+ "Hatch":`<path d="M20 108V88q0-8 8-10l44-10 30-28q5-5 12-5h74q8 0 13 5l22 26 38 12q8 2 8 10v22z"/><path d="M104 42h56v26H86zM170 42h28l20 26h-48z" fill="#9fb3c4" opacity=".55"/>`}[type];
+ return `<svg viewBox="0 0 340 140" aria-hidden="true"><ellipse cx="170" cy="130" rx="140" ry="7" fill="#000" opacity=".5"/><g fill="${hex}" stroke="rgba(255,255,255,.25)" stroke-width="1.5">${body}</g>${w}<rect x="20" y="82" width="12" height="6" rx="2" fill="#ffe9a8"/></svg>`;
+}
+$('#stage').innerHTML='<img src="img/car7.jpeg" alt="Toyota Hilux SW4 SRV 2020">';
+$('#marq').innerHTML=[...new Set(cars.map(c=>c.b)),"20 anos de tradição","Atendimento 24h","Seminovos selecionados"].concat([...new Set(cars.map(c=>c.b)),"20 anos de tradição","Atendimento 24h","Seminovos selecionados"]).map(x=>`<span>${x}</span>`).join('');
+
+/* filters */
+let cat="Todos",favs=new Set(JSON.parse(localStorage.getItem('fv_favs')||'[]'));
+const cats=["Todos","SUV","Pick-up","Sedan","Hatch"];
+$('#cats').innerHTML=cats.map((c,i)=>`<button class="chip${i?'':' on'}" data-c="${c}">${c}</button>`).join('');
+$('#fBrand').innerHTML='<option value="">Marca: todas</option>'+[...new Set(cars.map(c=>c.b))].map(b=>`<option>${b}</option>`).join('');
+$('#cats').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;cat=b.dataset.c;document.querySelectorAll('#cats .chip').forEach(x=>x.classList.toggle('on',x===b));render()};
+['fBrand','fTrans','fSort','fPrice'].forEach(i=>$('#'+i).oninput=render);
+
+function render(){
+ const br=$('#fBrand').value,tr=$('#fTrans').value,mx=+$('#fPrice').value,s=$('#fSort').value;
+ $('#pv').textContent=brl(mx);
+ let l=cars.filter(c=>(cat=="Todos"||c.c==cat)&&(!br||c.b==br)&&(!tr||c.t==tr)&&c.p<=mx);
+ l.sort((a,b)=>({p0:a.p-b.p,p1:b.p-a.p,y1:b.y-a.y,k0:a.k-b.k})[s]);
+ $('#grid').innerHTML=l.length?l.map(c=>`<article class="card" data-id="${c.id}">
+ <div class="pic"><img src="img/car${c.id}.jpeg" alt="${c.b} ${c.n} ${c.y}" loading="lazy"><span class="tag">${c.star?'Blindada':c.y>=2023?'Quase zero':c.b}</span>
+ <button class="fav${favs.has(c.id)?' on':''}" data-f="${c.id}" aria-label="Favoritar"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.7-8 11-8 11z"/></svg></button></div>
+ <div class="info"><h3>${c.n}</h3><small>${c.d}</small>
+ <div class="specs"><span>${c.y}</span><span>${c.k.toLocaleString('pt-BR')} km</span><span>${c.t}</span><span>${c.col}</span></div>
+ <div class="price"><b>${brl(c.p)}</b><span>à vista</span></div>
+ <a class="btn btn-wa" target="_blank" rel="noopener" href="${wa(`Olá! Tenho interesse no ${c.b} ${c.n} ${c.y} (${brl(c.p)}) que vi no site. Ainda está disponível?`)}">Tenho interesse</a></div></article>`).join(''):'<div class="empty">Nenhum veículo com esses filtros. <a style="color:var(--gold)" href="#" onclick="location.reload()">Limpar</a> ou peça no WhatsApp — buscamos para você.</div>';
+ tilt();
+}
+$('#grid').onclick=e=>{const f=e.target.closest('.fav');if(!f)return;const id=+f.dataset.f;favs.has(id)?favs.delete(id):favs.add(id);f.classList.toggle('on');saveFav()};
+function saveFav(){try{localStorage.setItem('fv_favs',JSON.stringify([...favs]))}catch(e){}
+ $('#fc').textContent=favs.size;$('#favbar').classList.toggle('show',favs.size>0);
+ const t="Olá! Tenho interesse nestes veículos:\n"+cars.filter(c=>favs.has(c.id)).map(c=>`• ${c.b} ${c.n} ${c.y} — ${brl(c.p)}`).join('\n');
+ $('#favWa').href=wa(t);$('#favWa').target="_blank"}
+
+/* 3D tilt */
+function tilt(){if(matchMedia('(hover:none)').matches)return;document.querySelectorAll('.card').forEach(c=>{
+ c.onmousemove=e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(800px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-4px)`};
+ c.onmouseleave=()=>c.style.transform=''})}
+
+/* simulator */
+$('#sCar').innerHTML=cars.map(c=>`<option value="${c.id}">${c.b} ${c.n} ${c.y} — ${brl(c.p)}</option>`).join('');
+function sim(){const c=cars.find(x=>x.id==$('#sCar').value),pct=+$('#sEnt').value,n=+$('#sMes').value,ent=Math.round(c.p*pct/100/1000)*1000,fin=c.p-ent,i=.0179;
+ const pmt=fin<=0?0:fin*i/(1-Math.pow(1+i,-n));
+ $('#eV').textContent=`${brl(ent)} (${pct}%)`;$('#sRes').textContent=pmt?`${n}x ${brl(pmt)}`:'Sem parcelas';
+ $('#sWa').href=wa(`Olá! Simulei no site: ${c.b} ${c.n} ${c.y} (${brl(c.p)}), entrada ${brl(ent)}, ${n}x de ~${brl(pmt)}. Podemos avançar com a aprovação?`);$('#sWa').target="_blank"}
+['sCar','sEnt','sMes'].forEach(i=>$('#'+i).oninput=sim);
+$('#tWa').onclick=e=>{const m=$('#tModel').value.trim();if(!m){e.preventDefault();$('#tModel').focus();return}
+ e.currentTarget.href=wa(`Olá! Meu nome é ${$('#tName').value||'(não informado)'}. Quero avaliar meu usado: ${m}, ano ${$('#tYear').value||'?'}, ${$('#tKm').value||'?'} km. Pode me passar uma avaliação?`);e.currentTarget.target="_blank"};
+document.querySelectorAll('.tabs .chip').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs .chip').forEach(x=>x.classList.toggle('on',x===b));
+ document.querySelectorAll('.panel').forEach((p,i)=>p.classList.toggle('on',i==b.dataset.t))});
+
+/* generic wa links */
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href=wa(a.dataset.wa);a.target="_blank";a.rel="noopener"});
+
+/* nav, reveal, counters */
+const nav=$('#nav');addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>30));
+$('#burger').onclick=()=>$('#menu').classList.toggle('open');
+$('#menu').onclick=e=>{if(e.target.closest('a'))$('#menu').classList.remove('open')};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(x=>io.observe(x));
+document.querySelectorAll('[data-n]').forEach(el=>{const t=+el.dataset.n;let v=0;const s=setInterval(()=>{v+=Math.max(1,t/40);if(v>=t){v=t;clearInterval(s)}el.textContent=Math.round(v)+(t==20?'+':'')},35)});
+$('#yr').textContent=new Date().getFullYear();
+render();sim();saveFav();
+</script>
+</body>
+</html>
